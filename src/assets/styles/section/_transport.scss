@@ -1,0 +1,106 @@
+.transport {
+
+    padding-bottom: 181px;
+
+    &__title {
+        max-width: 510px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            margin: 0 auto 25px;
+            text-align: center;
+        }
+
+        &-sml {
+            font-size: toRem(18);
+            display: block;
+            margin-bottom: 36px;
+
+            @include a (tablet-xl) {
+                margin: 0 auto 36px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__descr {
+        line-height: 24px;
+        color: #70748C;
+        max-width: 481px;
+        width: 100%;
+        margin-bottom: 94px;
+
+        @include a (tablet-xl) {
+            margin: 0 auto 70px;
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 120px);
+        justify-content: space-between;
+        margin-bottom: 166px;
+
+        @include a (tablet) {
+            grid-template-columns: repeat(2, 120px);
+            justify-content: space-around;
+        }
+
+        @include a (mobile) {
+            grid-template-columns: 120px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+
+    &__quote {
+        font-size: toRem(32);
+        line-height: 46px;
+        letter-spacing: 0.32px;
+        color: $main-color;
+        max-width: 586px;
+        width: 100%;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__agency {
+        position: relative;
+        padding-left: 158px;
+        margin-bottom: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/transport-agency.png);
+            width: 138px;
+            height: 138px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &-title {
+            font-size: toRem(18);
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        &-span {
+            line-height: 24px;
+            color: #70748C;
+        }
+    }
+}

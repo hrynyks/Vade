@@ -1,0 +1,64 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    z-index: 1;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 46px;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 46px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        white-space: nowrap;
+        &-link {
+            letter-spacing: 0.9px;
+            color: rgba(57, 55, 55, 0.4);
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__btn {
+        letter-spacing: 0.9px;
+        color: rgba(57, 55, 55, 0.4);
+        border: 1px solid rgba(57, 55, 55, 0.4);
+        border-radius: 4px;
+        padding: 10px 13px;
+
+        &:hover {
+            background-color: $accent-color;
+            border: none;
+        }
+    }
+}

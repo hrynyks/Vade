@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: $dark-color;
+
+    @include a (laptop) {
+        font-size: 13px;
+    }
+
+    @include a (tablet-xl) {
+        font-size: 11px;
+    }
+
+    @include a (tablet) {
+        font-size: 9px;
+    }
+
+    @include a (mobile) {
+        font-size: 7px;
+    }
+}
+
+@function toRem($value) {
+    $remValue: ($value / 15) + rem;
+    @return $remValue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    @include a (laptop) {
+        max-width: 95%;
+    }
+}
+
+.container-sml {
+    max-width: 1040px;
+    margin: 0 auto;
+
+    @include a (laptop) {
+        max-width: 95%;
+    }
+}
+
+.title {
+    font-size: toRem(44);
+    line-height: 50px;
+    font-weight: 400;
+    letter-spacing: 1.32px;
+    margin-bottom: 25px;
+}
+
+
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+input {
+    outline: none;
+    display: inline-block;
+    border: none;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}

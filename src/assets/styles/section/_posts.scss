@@ -1,0 +1,75 @@
+.posts {
+    padding: 100px 0;
+    background-color: #F9FBFD;
+
+    &__title {
+        font-size: toRem(18);
+        font-weight: 400;
+        margin-bottom: 24px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 21px;
+        margin-bottom: 88px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 333px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+
+        &-img {
+            min-height: 283px;
+        }
+
+        &-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        &-descr {
+            font-size: toRem(18);
+            line-height: 22px;
+            max-width: 260px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &-date {
+            color: #B5B7C7;
+        }
+    }
+
+    &__btn {
+        letter-spacing: 0.45px;
+        color: #5D6073;
+        background-color: transparent;
+        width: 166px;
+        line-height: 60px;
+        border: 1px solid #70748C;
+        border-radius: 4px;
+        text-align: center;
+
+        @include a (tablet-xl) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
